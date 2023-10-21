@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh  """
                     echo ${WORKSPACE}
-                    git clone https://github.com/kimdragon50/facam-frontend.git
+                    git clone https://github.com/sungminlee-angel/exam-jenkins.git
                     """
             }
         }
@@ -33,7 +33,7 @@ pipeline {
                     MY_APP_PRIVATE_IP = "" 
 
                     sh  """
-                        git clone https://github.com/kimdragon50/facam-ansible.git 
+                        git clone https://github.com/sungminlee-angel/exam-ansible.git
                         cd  facam-ansible 
 
                         sed -i 's/MY_KEYPAIR_NAME/${MY_KEYPAIR_NAME}/g' hosts/hosts
