@@ -12,14 +12,14 @@ pipeline {
             steps {
                 sh  """
                     echo ${WORKSPACE}
-                    git clone https://github.com/sungminlee-angel/exam-jenkins.git
+                    git clone https://github.com/sungminlee-angel/exam-node.js-frontend.git
                     """
             }
         }
         stage ('npm build') {
             steps {
                 sh  """
-                    cd facam-frontend
+                    cd exam-node.js-frontend
                     npm install
                     npm run build
                     """
