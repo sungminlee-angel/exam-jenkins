@@ -19,9 +19,16 @@ pipeline {
         stage ('npm build') {
             steps {
                 sh  """
+
                     cd exam-node.js-frontend
+                    # npm cache clean --force
+                    # npm config delete proxy
+                    # npm config delete https-proxy
                     npm install
-                    npm run build
+                    # npm fund
+                    # npm audit fix --force
+                    CI=false npm run build
+                
                     """
             }
         }
